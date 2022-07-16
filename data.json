@@ -1,0 +1,45 @@
+{
+    "projects":[
+ {"id": "0",
+ "project_name":"A Random Quote Generator",
+ "description":"This app displays random motivational quotes each time a button is clicked.",
+ "technologies":["JavaScript", "HTML", "CSS"],
+ "live_link":"https://jlopezjulian.github.io/Project-1/",
+ "github_link":"https://github.com/jlopezjulian/Project-1",
+ "image_urls":["/static/project_images/p1_randomgenerator.jpg","/static/project_images/p1_randomgenerator2.jpg"]
+ },
+ {"id":"1",
+ "project_name":"Student Directory with Pages",
+ "description": "This app displays a list of 9 students per page using data pagination to filter through directory pages.",
+ "technologies":["JavaScript", "HTML", "CSS"],
+ "live_link":"https://jlopezjulian.github.io/Project-2-Data-Pagination-and-Filtering/",
+ "github_link":"https://github.com/jlopezjulian/Project-2-Data-Pagination-and-Filtering",
+ "image_urls":["/static/project_images/p2_directorypage1.jpg","/static/project_images/p2_directorypage2.jpg"]
+ },
+ {"id":"2",
+ "project_name":"Tech Conference Sign Up Form",
+ "description":"This is a mock registration form for a tech conference.Highlights accessibility and validation",
+ "technologies":["JavaScript", "HTML", "CSS"],
+ "live_link":"https://jlopezjulian.github.io/Project-3---Interactive-Form/",
+ "github_link":"https://github.com/jlopezjulian/Project-3---Interactive-Form",
+ "image_urls":["/static/project_images/p3_techform1.png", "/static/project_images/p3_techform2.png"]
+},
+ {"id":"3",
+ "project_name":"Phrase Hunter- The Game",
+ "description": "A phrase guessing game where the player has 5 lives",
+ "technologies":["JavaScript", "HTML", "CSS"],
+ "live_link":"https://jlopezjulian.github.io/Project-4/",
+ "github_link":"https://github.com/jlopezjulian/Project-4",
+ "image_urls":["/static/project_images/p4_phrasehunter1.jpg", "/static/project_images/p4_phrasehunter2.jpg"]
+ },
+ {"id":"4",
+ "project_name":"Start-up Employee Directory",
+ "description":"An app that pulls employee information from an API",
+ "technologies":["JavaScript", "HTML", "CSS"],
+ "live_link":"https://jlopezjulian.github.io/Project-5--Public-API-Requests/",
+ "github_link":"https://github.com/jlopezjulian/Project-5--Public-API-Requests",
+ "image_urls":["/static/project_images/p5_dynamicdirectory1.jpg", "/static/project_images/p5_dynamicdirectory2.jpg"]
+ }
+]
+ }
+
