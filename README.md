@@ -2,7 +2,7 @@
  Portfolio 
  
  
-My collection of Treehouse projects demenstrating "server-side" Javascript.
+My collection of Treehouse projects demonstrating "server-side" Javascript.
 
 Javascript Template used: Pug. 
 Technologies used: Node.js and Express 
