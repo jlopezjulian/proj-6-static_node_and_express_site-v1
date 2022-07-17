@@ -44,7 +44,7 @@ app.get('/about', (req, res, next) => {
     } else {
         const err = new Error();
         err.status = 404;
-        err.message = "Sorry, this page does not exist"
+        err.message = "Sorry, page not found"
         next(err);
     }
 });
@@ -53,16 +53,18 @@ app.get('/about', (req, res, next) => {
 //  * Error Handler
 //  */
 
-app.use(( req, res, next) =>{
-    const err = new Error("Sorry, page not found");
-    err.status = 404;
+app.use((req, res, next) =>{
+    console.log('404 error');
+    const err = new Error("Sorry, page not found"); //setting a status property to 404
+    err.status = 404; //handling 404 errors: https://teamtreehouse.com/library/handling-404-errors#downloads
     next(err)
     });
 
   //global error handling
 app.use((err, req, res, next) => {
-      console.error(err.stack)
-      res.status(err.status || 500 ).send('Whoops, something needs fixing!');
+    res.local.error = err;
+    console.error(err.stack);
+    res.status(err.status || 500).send('Whoops, something needs fixing!');
     })
 
 
