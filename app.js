@@ -62,7 +62,7 @@ app.use((req, res, next) =>{
 
   //global error handling
 app.use((err, req, res, next) => {
-    res.local.error = err;
+    // res.local.error = err;
     console.error(err.stack);
     res.status(err.status || 500).send('Whoops, something needs fixing!');
     })
@@ -70,7 +70,7 @@ app.use((err, req, res, next) => {
 
 
 //   /*
-//    * Setting up the port - Port number can be changed in const variable at the top
+//    * Setting up the port
 //    */
 
  app.listen(3000, () => {
