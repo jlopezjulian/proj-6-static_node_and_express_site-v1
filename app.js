@@ -11,6 +11,7 @@
 //setting up express, referencing Treehouse video "Creating a Server in Express" 1:32
 const express = require('express');
 const app = express();
+
 const { projects } = require('./data.json'); //connecting to json file
 
 app.set('view engine', 'pug'); //middleware is set up -- set up view engine to pug
@@ -33,28 +34,26 @@ app.get('/about', (req, res, next) => {
 
 // /**
 //  * Project Page Routes
+//  * based on the id of the project that render a customized version of the pug proj
 //  */
 
- app.get("/projects/:id", (req, res, next) => {
-    const id = req.params.id;
+app.get("/projects/:id", (req, res, next) => {
+    const id  = req.params.id;
     const project = projects[id];
     if (project) {
-        res.locals.data = projects;
-        return res.render('project', { project });
-    } else {
-        const err = new Error();
-        err.status = 404;
-        err.message = "Sorry, page not found"
-        next(err);
+        res.render('project', { project });
+    }else{
+        next();
     }
-});
+    })
+
 
 // /**
 //  * Error Handler
 //  */
 
 app.use((req, res, next) =>{
-    console.log('404 error');
+    // console.log('404 error');
     const err = new Error("Sorry, page not found"); //setting a status property to 404
     err.status = 404; //handling 404 errors: https://teamtreehouse.com/library/handling-404-errors#downloads
     next(err)
@@ -64,7 +63,8 @@ app.use((req, res, next) =>{
 app.use((err, req, res, next) => {
     // res.local.error = err;
     console.error(err.stack);
-    res.status(err.status || 500).send('Whoops, something needs fixing!');
+    res.status(err.status || 500)
+    res.send('Whoops, something needs fixing!');
     })
 
 
